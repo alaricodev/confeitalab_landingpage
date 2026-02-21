@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── SEO básico ─────────────────────────────────────────────── -->
+  <title>ConfeitaLab · Sistema de Gestão para Confeiteiras</title>
+  <meta name="description" content="O sistema que vai transformar a gestão da sua confeitaria. Fichas técnicas com custo automático, precificação inteligente, controle financeiro e muito mais. Em breve." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="ConfeitaLab" />
+  <meta name="keywords" content="sistema para confeitaria, gestão confeitaria, ficha técnica confeitaria, precificação confeitaria, software confeiteira, controle financeiro confeitaria" />
+  <link rel="canonical" href="https://confeitalab.com.br" />
+
+  <!-- ── Verificação Google Search Console ──────────────────────── -->
+  <!-- Substitua o content pelo código gerado no Search Console     -->
+  <!-- <meta name="google-site-verification" content="SEU_CODIGO_AQUI" /> -->
+
+  <!-- ── Open Graph (WhatsApp, Facebook, LinkedIn) ──────────────── -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://confeitalab.com.br" />
+  <meta property="og:title"       content="ConfeitaLab · Sistema de Gestão para Confeiteiras" />
+  <meta property="og:description" content="Fichas técnicas, precificação inteligente, controle financeiro e PDV — tudo pensado para confeiteiras que querem crescer com organização." />
+  <meta property="og:image"       content="https://confeitalab.com.br/og-image.jpg" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt"    content="ConfeitaLab — Sistema de gestão para confeiteiras" />
+  <meta property="og:locale"       content="pt_BR" />
+  <meta property="og:site_name"    content="ConfeitaLab" />
+
+  <!-- ── Twitter / X ───────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="ConfeitaLab · Sistema de Gestão para Confeiteiras" />
+  <meta name="twitter:description" content="Fichas técnicas, precificação inteligente e controle financeiro para confeiteiras. Em breve." />
+  <meta name="twitter:image"       content="https://confeitalab.com.br/og-image.jpg" />
+
+  <!-- ── Favicon ───────────────────────────────────────────────── -->
+  <link rel="icon"             type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180"     href="/apple-touch-icon.png" />
+
+  <!-- ── Schema.org JSON-LD ────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ConfeitaLab",
+    "url": "https://confeitalab.com.br",
+    "description": "Sistema de gestão completo para confeiteiras: fichas técnicas com custo automático, precificação inteligente, controle de insumos, PDV integrado, gestão de encomendas e relatórios financeiros.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "inLanguage": "pt-BR",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/PreOrder",
+      "priceCurrency": "BRL"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ConfeitaLab",
+      "url": "https://confeitalab.com.br"
+    },
+    "featureList": [
+      "Fichas técnicas com custo automático",
+      "Precificação inteligente de produtos",
+      "Controle de insumos e fornecedores",
+      "PDV integrado",
+      "Gestão de encomendas",
+      "Relatórios financeiros e DRE"
+    ]
+  }
+  </script>
+
+  <!-- ── Microsoft Clarity ────────────────────────────────────── -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "vl1ah71ttc");
+  </script>
+
+  <!-- ── Google Analytics 4 ────────────────────────────────────── -->
+  <!-- Cole aqui o script do GA4 quando criar a propriedade        -->
+
+  <!-- ── Fontes ─────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --rosa:    #B4436C;
+      --rosa-d:  #8E3356;
+      --navy:    #2D3047;
+      --gold:    #F0B07A;
+      --gold-l:  #F7D4A8;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      background: var(--navy);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* ── background ── */
+    .bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 20% 10%,  rgba(180,67,108,0.28) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 85% 80%,  rgba(240,176,122,0.18) 0%, transparent 55%),
+        radial-gradient(ellipse 100% 80% at 50% 50%, rgba(45,48,71,1) 0%, #1a1b2e 100%);
+    }
+
+    /* partículas flutuantes */
+    .particles {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .p {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0;
+      animation: float linear infinite;
+    }
+    @keyframes float {
+      0%   { transform: translateY(110vh) scale(0); opacity: 0; }
+      10%  { opacity: 1; }
+      90%  { opacity: 0.6; }
+      100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+    }
+
+    /* ── layout ── */
+    .page {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 24px;
+      text-align: center;
+    }
+
+    /* ── badge ── */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(180,67,108,0.18);
+      border: 1px solid rgba(180,67,108,0.40);
+      border-radius: 100px;
+      padding: 6px 18px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold-l);
+      margin-bottom: 32px;
+      animation: fadeDown 0.7s ease both;
+    }
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+      animation: pulse 2s ease infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.4; transform: scale(0.7); }
+    }
+
+    /* ── logo ── */
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 8px;
+      animation: fadeDown 0.7s 0.1s ease both;
+    }
+    .logo-icon {
+      font-size: 2.6rem;
+      line-height: 1;
+      filter: drop-shadow(0 0 18px rgba(240,176,122,0.5));
+    }
+    .logo-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+    .logo-name em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    /* ── headline ── */
+    .headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 5vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.25;
+      color: #fff;
+      max-width: 640px;
+      margin: 28px auto 16px;
+      animation: fadeDown 0.7s 0.2s ease both;
+    }
+    .headline span {
+      color: var(--gold);
+    }
+
+    .sub {
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      color: rgba(255,255,255,0.60);
+      max-width: 480px;
+      margin: 0 auto 48px;
+      line-height: 1.65;
+      animation: fadeDown 0.7s 0.3s ease both;
+    }
+
+    /* ── countdown ── */
+    .countdown-wrap {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-bottom: 52px;
+      flex-wrap: wrap;
+      animation: fadeDown 0.7s 0.4s ease both;
+    }
+    .count-box {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 14px;
+      padding: 18px 22px 14px;
+      min-width: 76px;
+      backdrop-filter: blur(8px);
+    }
+    .count-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      display: block;
+    }
+    .count-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.40);
+      display: block;
+      margin-top: 6px;
+    }
+
+    /* ── email form ── */
+    .form-wrap {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 52px;
+      animation: fadeDown 0.7s 0.5s ease both;
+    }
+    .email-input {
+      background: rgba(255,255,255,0.07);
+      border: 1.5px solid rgba(255,255,255,0.15);
+      border-radius: 10px;
+      padding: 0 18px;
+      height: 48px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: #fff;
+      outline: none;
+      width: 280px;
+      max-width: 100%;
+      transition: border-color 0.2s;
+    }
+    .email-input::placeholder { color: rgba(255,255,255,0.35); }
+    .email-input:focus { border-color: var(--rosa); }
+
+    .btn-notify {
+      height: 48px;
+      padding: 0 28px;
+      border-radius: 10px;
+      border: none;
+      background: linear-gradient(135deg, var(--rosa) 0%, var(--rosa-d) 100%);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+      box-shadow: 0 6px 24px rgba(180,67,108,0.35);
+      white-space: nowrap;
+    }
+    .btn-notify:hover  { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(180,67,108,0.45); }
+    .btn-notify:active { transform: translateY(0); }
+
+    .form-msg {
+      font-size: 0.82rem;
+      color: var(--gold);
+      margin-top: 8px;
+      min-height: 20px;
+      animation: fadeDown 0.3s ease both;
+    }
+
+    /* ── features ── */
+    .features {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 640px;
+      margin: 0 auto 52px;
+      animation: fadeDown 0.7s 0.6s ease both;
+    }
+    .feat {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 100px;
+      padding: 8px 16px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.75);
+      white-space: nowrap;
+    }
+    .feat-icon { font-size: 1rem; }
+
+    /* ── divider ── */
+    .divider {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--rosa), var(--gold));
+      border-radius: 99px;
+      margin: 0 auto 52px;
+      animation: fadeDown 0.7s 0.35s ease both;
+    }
+
+    /* ── footer ── */
+    .footer {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.25);
+      animation: fadeDown 0.7s 0.7s ease both;
+    }
+    .footer a { color: rgba(255,255,255,0.35); text-decoration: none; }
+    .footer a:hover { color: var(--gold); }
+
+    /* ── animations ── */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── responsive ── */
+    @media (max-width: 480px) {
+      .countdown-wrap { gap: 10px; }
+      .count-box { min-width: 64px; padding: 14px 16px 12px; }
+      .count-num { font-size: 1.8rem; }
+      .features { gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg"></div>
+
+  <!-- partículas decorativas -->
+  <div class="particles" id="particles"></div>
+
+  <main class="page">
+
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Em breve
+    </div>
+
+    <div class="logo">
+      <span class="logo-icon">🧁</span>
+      <span class="logo-name">Confeita<em>Lab</em></span>
+    </div>
+
+    <h1 class="headline">
+      Gestão inteligente para quem faz a <span>confeitaria virar negócio</span>
+    </h1>
+
+    <p class="sub">
+      Fichas técnicas, precificação, controle financeiro e muito mais —
+      tudo pensado para confeiteiras que querem crescer com organização e clareza.
+    </p>
+
+    <div class="divider"></div>
+
+    <!-- Countdown -->
+    <div class="countdown-wrap">
+      <div class="count-box">
+        <span class="count-num" id="cd-dias">00</span>
+        <span class="count-label">Dias</span>
+      </div>
+      <div class="count-box">
+        <span class="count-num" id="cd-horas">00</span>
+        <span class="count-label">Horas</span>
+      </div>
+      <div class="count-box">
+        <span class="count-num" id="cd-min">00</span>
+        <span class="count-label">Min</span>
+      </div>
+      <div class="count-box">
+        <span class="count-num" id="cd-seg">00</span>
+        <span class="count-label">Seg</span>
+      </div>
+    </div>
+
+    <!-- Captação de e-mail -->
+    <div>
+      <div class="form-wrap">
+        <input
+          class="email-input"
+          type="email"
+          id="email-input"
+          placeholder="Seu melhor e-mail"
+          autocomplete="email"
+        />
+        <button class="btn-notify" onclick="cadastrar()">Quero ser avisada</button>
+      </div>
+      <div class="form-msg" id="form-msg"></div>
+    </div>
+
+    <!-- Features -->
+    <div class="features">
+      <div class="feat"><span class="feat-icon">📋</span> Fichas técnicas</div>
+      <div class="feat"><span class="feat-icon">💰</span> Precificação automática</div>
+      <div class="feat"><span class="feat-icon">📦</span> Controle de insumos</div>
+      <div class="feat"><span class="feat-icon">📊</span> Relatórios financeiros</div>
+      <div class="feat"><span class="feat-icon">🛍️</span> PDV integrado</div>
+      <div class="feat"><span class="feat-icon">📅</span> Gestão de encomendas</div>
+    </div>
+
+    <footer class="footer">
+      © 2025 ConfeitaLab · Feito com carinho para confeiteiras 🩷
+    </footer>
+
+  </main>
+
+  <script>
+    // ── Countdown (ajuste a data de lançamento aqui) ──────────────────
+    const LANCAMENTO = new Date('2026-05-01T00:00:00');
+
+    function tick() {
+      const agora = new Date();
+      const diff  = LANCAMENTO - agora;
+
+      if (diff <= 0) {
+        document.getElementById('cd-dias').textContent  = '00';
+        document.getElementById('cd-horas').textContent = '00';
+        document.getElementById('cd-min').textContent   = '00';
+        document.getElementById('cd-seg').textContent   = '00';
+        return;
+      }
+
+      const pad = n => String(Math.floor(n)).padStart(2, '0');
+      document.getElementById('cd-dias').textContent  = pad(diff / 86400000);
+      document.getElementById('cd-horas').textContent = pad((diff % 86400000) / 3600000);
+      document.getElementById('cd-min').textContent   = pad((diff % 3600000)  / 60000);
+      document.getElementById('cd-seg').textContent   = pad((diff % 60000)    / 1000);
+    }
+
+    tick();
+    setInterval(tick, 1000);
+
+    // ── Captação de e-mail (Formspree) ───────────────────────────────
+    async function cadastrar() {
+      const input = document.getElementById('email-input');
+      const btn   = document.querySelector('.btn-notify');
+      const msg   = document.getElementById('form-msg');
+      const email = input.value.trim();
+      const re    = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!re.test(email)) {
+        msg.style.color = '#F07A7A';
+        msg.textContent = 'Digite um e-mail válido.';
+        input.focus();
+        return;
+      }
+
+      // estado de carregamento
+      btn.disabled    = true;
+      btn.textContent = 'Enviando...';
+      msg.style.color = 'rgba(255,255,255,0.5)';
+      msg.textContent = '';
+
+      try {
+        const res = await fetch('https://formspree.io/f/xjgeaoao', {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body:    JSON.stringify({ email }),
+        });
+
+        if (res.ok) {
+          input.value     = '';
+          msg.style.color = '#F0B07A';
+          msg.textContent = '✨ Perfeito! Você será avisada quando abrirmos.';
+          setTimeout(() => { msg.textContent = ''; }, 6000);
+        } else {
+          throw new Error();
+        }
+      } catch {
+        msg.style.color = '#F07A7A';
+        msg.textContent = 'Ops! Tente novamente em instantes.';
+      } finally {
+        btn.disabled    = false;
+        btn.textContent = 'Quero ser avisada';
+      }
+    }
+
+    document.getElementById('email-input').addEventListener('keydown', e => {
+      if (e.key === 'Enter') cadastrar();
+    });
+
+    // ── Partículas flutuantes ─────────────────────────────────────────
+    const container = document.getElementById('particles');
+    const colors = ['rgba(180,67,108,0.25)', 'rgba(240,176,122,0.20)', 'rgba(255,255,255,0.08)'];
+
+    for (let i = 0; i < 22; i++) {
+      const p = document.createElement('div');
+      p.className = 'p';
+      const size = 6 + Math.random() * 14;
+      p.style.cssText = [
+        `width:${size}px`,
+        `height:${size}px`,
+        `left:${Math.random() * 100}%`,
+        `background:${colors[Math.floor(Math.random() * colors.length)]}`,
+        `animation-duration:${12 + Math.random() * 18}s`,
+        `animation-delay:${Math.random() * 14}s`,
+      ].join(';');
+      container.appendChild(p);
+    }
+  </script>
+</body>
+</html>
