@@ -13,8 +13,7 @@
   <link rel="canonical" href="https://confeitalab.com.br" />
 
   <!-- ── Verificação Google Search Console ──────────────────────── -->
-  <!-- Substitua o content pelo código gerado no Search Console     -->
-  <!-- <meta name="google-site-verification" content="SEU_CODIGO_AQUI" /> -->
+  <meta name="google-site-verification" content="googleb080653b7ead60f5" />
 
   <!-- ── Open Graph (WhatsApp, Facebook, LinkedIn) ──────────────── -->
   <meta property="og:type"        content="website" />
@@ -80,14 +79,6 @@
   </script>
 
   <!-- ── Google Analytics 4 ────────────────────────────────────── -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "vl1ah71ttc");
-  </script>
-
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4TTB5GJFPV"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -381,6 +372,19 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
+    /* ── sr-only (acessibilidade) ── */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
     /* ── responsive ── */
     @media (max-width: 480px) {
       .countdown-wrap { gap: 10px; }
@@ -421,6 +425,7 @@
     <div class="divider"></div>
 
     <!-- Countdown -->
+    <h2 class="sr-only">Contagem regressiva para o lançamento</h2>
     <div class="countdown-wrap">
       <div class="count-box">
         <span class="count-num" id="cd-dias">00</span>
@@ -441,6 +446,7 @@
     </div>
 
     <!-- Captação de e-mail -->
+    <h2 class="sr-only">Cadastre-se para ser avisada do lançamento</h2>
     <div>
       <div class="form-wrap">
         <input
@@ -456,13 +462,14 @@
     </div>
 
     <!-- Features -->
-    <div class="features">
-      <div class="feat"><span class="feat-icon">📋</span> Fichas técnicas</div>
-      <div class="feat"><span class="feat-icon">💰</span> Precificação automática</div>
-      <div class="feat"><span class="feat-icon">📦</span> Controle de insumos</div>
-      <div class="feat"><span class="feat-icon">📊</span> Relatórios financeiros</div>
-      <div class="feat"><span class="feat-icon">🛍️</span> PDV integrado</div>
-      <div class="feat"><span class="feat-icon">📅</span> Gestão de encomendas</div>
+    <h2 class="sr-only">Funcionalidades do ConfeitaLab</h2>
+    <div class="features" role="list">
+      <div class="feat" role="listitem"><span class="feat-icon" aria-hidden="true">📋</span> Fichas técnicas</div>
+      <div class="feat" role="listitem"><span class="feat-icon" aria-hidden="true">💰</span> Precificação automática</div>
+      <div class="feat" role="listitem"><span class="feat-icon" aria-hidden="true">📦</span> Controle de insumos</div>
+      <div class="feat" role="listitem"><span class="feat-icon" aria-hidden="true">📊</span> Relatórios financeiros</div>
+      <div class="feat" role="listitem"><span class="feat-icon" aria-hidden="true">🛍️</span> PDV integrado</div>
+      <div class="feat" role="listitem"><span class="feat-icon" aria-hidden="true">📅</span> Gestão de encomendas</div>
     </div>
 
     <footer class="footer">
